@@ -46,8 +46,8 @@ Create Book
 
             <div>
                 <label for="title">Title</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" value="{{ $book->title }}"
-                    name="title" placeholder="Book Title">
+                <input type="text" class="form-control @error('title') is-invalid @enderror"
+                    value="{{ old('title',$book->title )}}" name="title" placeholder="Book Title">
                 @error('title')
                 <div class="invalid-feedback">
                     {{ $message }}

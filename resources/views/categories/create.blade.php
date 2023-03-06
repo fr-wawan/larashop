@@ -19,7 +19,7 @@ Create Category
             <div class="my-3">
                 <label for="name">Category Name</label>
                 <input type="text" name="name" id="name" placeholder="Category Name"
-                    class="form-control  @error('name') is-invalid @enderror">
+                    class="form-control  @error('name') is-invalid @enderror" value="{{ old('name') }}">
                 @error('name')
                 <div class="invalid-feedback">
                     {{ $message }}
